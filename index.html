@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily Mood Tracker</title>
     <link rel="stylesheet" href="style.css">
+</head>
 
 <body>
     <main>
@@ -14,46 +15,53 @@
                 <p>a little space for your feelings</p>
             </header>
 
-            <h1 class="card-header">Daily Mood Tracker</h1>
-
-            <p class="mood-question">
+            <div class="mood-question">
                <h2>How are you feeling today?</h2>
-            </p>
-
-            <div class="mood-buttons">
-                <button class="happy-mood">
-                <span>😊Happy</span>
-                </button>
-                <button class="sad-mood">
-                <span>🥲Sad</span> 
-                </button>
-                <button class="excited-mood">
-                <span>🤩Excited</span> 
-                </button>
-                <button class="angry-mood">
-                <span>😡Angry</span> 
-                </button>
-                
-                <p>Click a button to select your mood</p>
             </div>
 
-        <div class="selected-mood">
+            <div class="mood-buttons">
+                <div class="mood-card happy-mood">
+                    <span>😊</span>
+                    <p>Happy</p>
+                </div>
+                <div class="mood-card sad-mood">
+                    <span>🥲</span>
+                    <p>Sad</p>
+                </div>
 
+                <div class="mood-card excited-mood">
+                    <span>🤩</span>
+                    <p>Excited</p>
+                </div>
+
+                <div class="mood-card angry-mood">
+                    <span>😡</span>
+                    <p>Angry</p>
+                </div>
+               
+            </div>
+                
+            <div class="selected-mood">
+                <h3>You chose: Happy</h3>
+                <p>Good things are coming, keep going</p>
+            </div>
+            <div class="journal-section">
+                <label for="mood-note">Today I feel...</label>
+                <textarea id="mood-note" placeholder="Write what's on your mind..."></textarea>
+            </div>
+
+            <button class="log-button">♡ Log my mood</button>
+            <footer>
+                <p>Small steps · Better days</p>
+            </footer>
 
         </div>
-        <div class="journal-section">
-
-        </div>
-        <div class="log-button">
-
-        </div>
-        <div class="footer">
-
-        </div>
-        
-        </div>
+            
+            
     
-        <script src="script.js" defer></script>
+       
     </main>
+
+     <script src="script.js" defer></script>
 </body>
 </html>

@@ -1,55 +1,191 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    height: 100vh;
+    min-height: 100vh;
+    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 24px;
     background: #fff7fa;
     font-family: "Poppins", sans-serif;
 }
+
 .card-container {
-    width: 380px;
+    width: 100%;
+    max-width: 420px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 32px;
     background: #ffffff;
+    border: 1px solid #f8dce6;
     border-radius: 24px;
-    padding: 30px 40px 40px; 
-    box-shadow: 0 10px 30px rgba(255, 180, 200, 0.2);
+    box-shadow: 0 12px 35px rgba(187, 99, 122, 0.16);
 }
-.card-header {
-    margin-top: 0;
-    margin-bottom: 8px;
-    font-size: 30px;
-    text-align: center;
-    font-family: "Quicksand", sans-serif;
-    font-weight: 700;
-    color: #3d3035;
-}
+
 .mood-question {
-    margin: 0 0 25px;
+    margin: 0 0 20px;
+    color: #806f76;
     font-size: 15px;
     font-weight: 500;
-    color: #806f76;
+    text-align: center;
 }
+
 .mood-buttons {
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 15px;
+    gap: 14px;
 }
+
 .happy-mood,
 .sad-mood,
 .excited-mood,
 .angry-mood {
-    height: 20px;
-    border: 1px solid;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 14px;
+    border: 1px solid #f4d6e1;
     border-radius: 18px;
-    background: white;
-    transition: 0.3s ease;
+    background: #fff8fb;
+    color: #55434b;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease,
+        border-color 0.3s ease, background 0.3s ease;
+}
+
+.happy-mood span,
+.sad-mood span,
+.excited-mood span,
+.angry-mood span {
+    font-size: 28px;
+}
+
+.happy-mood p,
+.sad-mood p,
+.excited-mood p,
+.angry-mood p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 .happy-mood:hover,
 .sad-mood:hover,
 .excited-mood:hover,
 .angry-mood:hover {
-    transform: translateY(-8px);
+    transform: translateY(-4px);
+    border-color: #e8a9bf;
+    background: #fff0f5;
+    box-shadow: 0 8px 18px rgba(187, 99, 122, 0.12);
+}
+
+header {
+    width: 100%;
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 6px;
+    color: #3d3035;
+    font-family: "Quicksand", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+header p {
+    margin: 0;
+    color: #a18d96;
+    font-size: 13px;
+}
+
+.selected-mood {
+    width: 100%;
+    margin-top: 24px;
+    padding: 18px;
+    border-radius: 18px;
+    background: #fff0f5;
+    text-align: center;
+}
+
+.selected-mood h3 {
+    margin: 0 0  6px;
+    color: #604650;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.selected-mood p {
+    margin: 0;
+    color: #927783;
+    font-size: 13px;
+}
+
+.journal-section {
+    width: 100%;
+    margin-top: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.journal-section label {
+    color: #604650;
+    font-size: 14px;
+    font-weight: 600;
+}
+.journal-section textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 13px;
+    border: 1px solid #f1d5e0;
+    border-radius: 14px;
+    outline: none;
+    resize: vertical;
+    background: #fffafd;
+    color: #604650;
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.journal-section textarea:focus {
+    border-color: #d995b0;
+    box-shadow: 0 0 0 3px rgba(217, 149, 176, 0.15);
+}
+.log-button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 13px;
+    border: none;
+    border-radius: 14px;
+    background: #d995b0;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+.log-button:hover {
+    background: #c9829e;
+    transform: translateY(-2px);
+}
+
+footer {
+    margin-top: 20px;
+}
+footer p {
+    margin: 0;
+    color: #b49ca6;
+    font-size: 12px;
+    text-align: center;
 }
