@@ -8,8 +8,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 24px;
-    background: #fff7fa;
+    padding: 16px;
+    background:
+        radial-gradient(circle at top left, #ffe4ee 0, transparent 32%),
+        radial-gradient(circle at bottom right, #f9dce8 0, transparent 30%),
+        #fff7fa;
     font-family: "Poppins", sans-serif;
 }
 
@@ -19,17 +22,17 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 32px;
-    background: #ffffff;
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.94);
     border: 1px solid #f8dce6;
-    border-radius: 24px;
-    box-shadow: 0 12px 35px rgba(187, 99, 122, 0.16);
+    border-radius: 26px;
+    box-shadow: 0 14px 35px rgba(187, 99, 122, 0.14);
 }
 
 .mood-question {
-    margin: 0 0 20px;
+    margin: 0 0 16px;
     color: #806f76;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
     text-align: center;
 }
@@ -38,35 +41,38 @@ body {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 14px;
+    gap: 10px;
 }
 
 .happy-mood,
 .sad-mood,
 .excited-mood,
 .angry-mood {
-    min-height: 100px;
+    min-height: 82px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 6px;
-    padding: 14px;
+    gap: 4px;
+    padding: 10px;
     border: 1px solid #f4d6e1;
-    border-radius: 18px;
+    border-radius: 17px;
     background: #fff8fb;
     color: #55434b;
     font-family: "Poppins", sans-serif;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease,
-        border-color 0.3s ease, background 0.3s ease;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease;
 }
 
 .happy-mood span,
 .sad-mood span,
 .excited-mood span,
 .angry-mood span {
-    font-size: 28px;
+    font-size: 25px;
 }
 
 .happy-mood p,
@@ -74,7 +80,7 @@ body {
 .excited-mood p,
 .angry-mood p {
     margin: 0;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 500;
 }
 
@@ -82,10 +88,10 @@ body {
 .sad-mood:hover,
 .excited-mood:hover,
 .angry-mood:hover {
-    transform: translateY(-4px);
+    transform: translateY(-3px);
     border-color: #e8a9bf;
     background: #fff0f5;
-    box-shadow: 0 8px 18px rgba(187, 99, 122, 0.12);
+    box-shadow: 0 7px 16px rgba(187, 99, 122, 0.12);
 }
 
 header {
@@ -95,67 +101,68 @@ header {
 }
 
 header h1 {
-    margin: 0 0 6px;
+    margin: 0 0 4px;
     color: #3d3035;
     font-family: "Quicksand", sans-serif;
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 700;
+    letter-spacing: -0.5px;
 }
 
 header p {
     margin: 0;
     color: #a18d96;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .selected-mood {
     width: 100%;
-    margin-top: 24px;
-    padding: 18px;
-    border-radius: 18px;
-    background: #fff0f5;
+    margin-top: 16px;
+    padding: 14px;
+    border: 1px solid #f7d5e2;
+    border-radius: 17px;
+    background: linear-gradient(135deg, #fff0f5, #fff8fb);
     text-align: center;
 }
 
 .selected-mood h3 {
-    margin: 0 0  6px;
+    margin: 0 0 4px;
     color: #604650;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
 }
 
 .selected-mood p {
     margin: 0;
     color: #927783;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .journal-section {
     width: 100%;
-    margin-top: 22px;
+    margin-top: 16px;
     display: flex;
     flex-direction: column;
-    gap: 9px;
+    gap: 7px;
 }
 
 .journal-section label {
     color: #604650;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
 }
 .journal-section textarea {
     width: 100%;
-    min-height: 100px;
-    padding: 13px;
+    min-height: 78px;
+    padding: 11px;
     border: 1px solid #f1d5e0;
-    border-radius: 14px;
+    border-radius: 13px;
     outline: none;
     resize: vertical;
     background: #fffafd;
     color: #604650;
     font-family: "Poppins", sans-serif;
-    font-size: 13px;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 12px;
 }
 .journal-section textarea:focus {
     border-color: #d995b0;
@@ -163,29 +170,30 @@ header p {
 }
 .log-button {
     width: 100%;
-    margin-top: 20px;
-    padding: 13px;
+    margin-top: 14px;
+    padding: 11px;
     border: none;
-    border-radius: 14px;
-    background: #d995b0;
+    border-radius: 13px;
+    background: linear-gradient(135deg, #d995b0, #c9829e);
     color: white;
     font-family: "Poppins", sans-serif;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
     cursor: pointer;
-    transition: background 0.3s ease, transform 0.3s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+
 .log-button:hover {
-    background: #c9829e;
     transform: translateY(-2px);
+    box-shadow: 0 7px 16px rgba(187, 99, 122, 0.2);
 }
 
 footer {
-    margin-top: 20px;
+    margin-top: 14px;
 }
 footer p {
     margin: 0;
     color: #b49ca6;
-    font-size: 12px;
+    font-size: 11px;
     text-align: center;
 }
