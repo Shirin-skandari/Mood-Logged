@@ -1,12 +1,12 @@
 const moodCards = document.querySelectorAll(".mood-card");
-const selectedMoodTitle = document.querySelector(".selected-mood h3");
 const selectedMoodMessage = document.querySelector(".selected-mood p");
+const selectedMoodName = document.querySelector("#selected-mood-name");
 
 moodCards.forEach((moodCard) => {
     moodCard.addEventListener("click", () => {
         const moodName = moodCard.querySelector("p").textContent;
 
-        selectedMoodTitle.textContent = `You chose: ${moodName}`;
+        selectedMoodName.textContent = moodName;
 
         if (moodName === "Happy") {
             selectedMoodMessage.textContent = "Hold on to this little piece of happiness 💕";

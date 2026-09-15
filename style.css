@@ -1,9 +1,15 @@
 * {
     box-sizing: border-box;
 }
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
 body {
     min-height: 100vh;
+    overflow-x: hidden;
     margin: 0;
     display: flex;
     align-items: center;
@@ -19,6 +25,7 @@ body {
 .card-container {
     width: 100%;
     max-width: 420px;
+    min-width: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -117,6 +124,7 @@ header p {
 
 .selected-mood {
     width: 100%;
+    min-width: 0;
     margin-top: 16px;
     padding: 14px;
     border: 1px solid #f7d5e2;
@@ -126,6 +134,9 @@ header p {
 }
 
 .selected-mood h3 {
+    width: 100%;
+    overflow-wrap: break-word;
+    min-height: 22px;
     margin: 0 0 4px;
     color: #604650;
     font-size: 15px;
@@ -133,6 +144,8 @@ header p {
 }
 
 .selected-mood p {
+    min-height: 18px;
+    overflow-wrap: break-word;
     margin: 0;
     color: #927783;
     font-size: 12px;
@@ -216,4 +229,14 @@ footer p {
     .selected-mood {
         padding: 16px;
     }
+}
+.selected-mood {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+.selected-mood h3,
+.selected-mood p {
+    overflow-wrap: anywhere;
 }
