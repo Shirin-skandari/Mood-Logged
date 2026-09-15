@@ -9,17 +9,17 @@ moodCards.forEach((moodCard) => {
         selectedMoodTitle.textContent = `You chose: ${moodName}`;
 
         if (moodName === "Happy") {
-            selectedMoodMessage.textContent = "Good things are coming, keep going";
+            selectedMoodMessage.textContent = "Hold on to this little piece of happiness 💕";
         }
 
         if (moodName === "Sad") {
-            selectedMoodMessage.textContent = "It's okay to have difficult days";
+            selectedMoodMessage.textContent = "You don't have to be okay all the time. Be gentle with yourself 🤍";
         }
         if (moodName === "Excited") {
-            selectedMoodMessage.textContent = "Keep that beautiful energy going";
+            selectedMoodMessage.textContent = "Let your happiness sparkle a little brighter today ✨";
         }
         if (moodName === "Angry") {
-            selectedMoodMessage.textContent = "Take a breath and give yourself some space";
+            selectedMoodMessage.textContent = "Take a little pause. You deserve a moment to breathe 🌷";
         }
     });
 });
