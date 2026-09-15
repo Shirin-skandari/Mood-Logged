@@ -18,5 +18,8 @@ moodCards.forEach((moodCard) => {
         if (moodName === "Excited") {
             selectedMoodMessage.textContent = "Keep that beautiful energy going";
         }
+        if (moodName === "Angry") {
+            selectedMoodMessage.textContent = "Take a breath and give yourself some space";
+        }
     });
 });
