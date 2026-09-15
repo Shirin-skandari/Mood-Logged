@@ -11,5 +11,9 @@ moodCards.forEach((moodCard) => {
         if (moodName === "Happy") {
             selectedMoodMessage.textContent = "Good things are coming, keep going";
         }
+
+        if (moodName === "Sad") {
+            selectedMoodMessage.textContent = "It's okay to have difficult days";
+        }
     });
 });
