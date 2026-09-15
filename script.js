@@ -15,5 +15,8 @@ moodCards.forEach((moodCard) => {
         if (moodName === "Sad") {
             selectedMoodMessage.textContent = "It's okay to have difficult days";
         }
+        if (moodName === "Excited") {
+            selectedMoodMessage.textContent = "Keep that beautiful energy going";
+        }
     });
 });
