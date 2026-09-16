@@ -1,6 +1,8 @@
 const moodCards = document.querySelectorAll(".mood-card");
 const selectedMoodMessage = document.querySelector(".selected-mood p");
 const selectedMoodName = document.querySelector("#selected-mood-name");
+const moodNote = document.querySelector("#mood-note");
+const logButton = document.querySelector(".log-button");
 
 moodCards.forEach((moodCard) => {
     moodCard.addEventListener("click", () => {
@@ -23,4 +25,12 @@ moodCards.forEach((moodCard) => {
             selectedMoodMessage.textContent = "Take a little pause. You deserve a moment to breathe 🌷";
         }
     });
+});
+
+logButton.addEventListener("click", () => {
+    const moodData = {
+        mood: selectedMoodName.textContent,
+        note: moodNote.value
+    };
+    console.log(moodData);
 });
