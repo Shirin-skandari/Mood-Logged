@@ -240,3 +240,19 @@ footer p {
 .selected-mood p {
     overflow-wrap: anywhere;
 }
+
+#selected-mood-name {
+    font-weight: 700;
+}
+#selected-mood-name.happy-text {
+    color: #f02874;
+}
+#selected-mood-name.sad-text {
+    color: #78a9d8;
+}
+#selected-mood-name.excited-text {
+    color: #a78bdb;
+}
+#selected-mood-name.angry-text {
+    color: #e03030;
+}

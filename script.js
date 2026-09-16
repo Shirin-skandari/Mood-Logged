@@ -7,6 +7,7 @@ moodCards.forEach((moodCard) => {
         const moodName = moodCard.querySelector("p").textContent;
 
         selectedMoodName.textContent = moodName;
+        selectedMoodName.className = `${moodName.toLocaleLowerCase()}-text`;
 
         if (moodName === "Happy") {
             selectedMoodMessage.textContent = "Hold on to this little piece of happiness 💕";
