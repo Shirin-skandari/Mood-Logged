@@ -256,3 +256,8 @@ footer p {
 #selected-mood-name.angry-text {
     color: #e03030;
 }
+
+.log-button.logged,
+.log-button.logged:hover {
+    background: #e0417c;
+}

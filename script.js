@@ -9,7 +9,7 @@ moodCards.forEach((moodCard) => {
         const moodName = moodCard.querySelector("p").textContent;
 
         selectedMoodName.textContent = moodName;
-        selectedMoodName.className = `${moodName.toLocaleLowerCase()}-text`;
+        selectedMoodName.className = `${moodName.toLowerCase()}-text`;
 
         if (moodName === "Happy") {
             selectedMoodMessage.textContent = "Hold on to this little piece of happiness 💕";
@@ -28,9 +28,22 @@ moodCards.forEach((moodCard) => {
 });
 
 logButton.addEventListener("click", () => {
+    if (selectedMoodName.textContent === "-") {
+        return;
+
+    }
+
     const moodData = {
         mood: selectedMoodName.textContent,
         note: moodNote.value
+
+       
     };
-    console.log(moodData);
+    localStorage.setItem("moodData", JSON.stringify(moodData));
+    logButton.classList.add("logged");
+    logButton.textContent = "Mood logged ✓";
+
+    
+    
 });
+
