@@ -4,6 +4,12 @@ const selectedMoodName = document.querySelector("#selected-mood-name");
 const moodNote = document.querySelector("#mood-note");
 const logButton = document.querySelector(".log-button");
 
+const savedMoods = localStorage.getItem("moodHistory");
+
+const moods = savedMoods ? JSON.parse(savedMoods) : [];
+
+console.log(moods);
+
 moodCards.forEach((moodCard) => {
     moodCard.addEventListener("click", () => {
         const moodName = moodCard.querySelector("p").textContent;
@@ -40,6 +46,9 @@ logButton.addEventListener("click", () => {
        
     };
     localStorage.setItem("moodData", JSON.stringify(moodData));
+    moods.push(moodData);
+    localStorage.setItem("moodHistory", JSON.stringify(moods));
+    console.log(moods)
     logButton.classList.add("logged");
     logButton.textContent = "Mood logged ✓";
 
