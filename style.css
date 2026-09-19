@@ -319,3 +319,17 @@ footer p {
     border-color: #f2b7b7;
     background: #fff8f8;
 }
+.mood-history-item button {
+    margin-top: 12px;
+    padding: 7px 14px;
+    border: 1px solid #f3c6d5;
+    border-radius: 8px;
+    background: #fff;
+    color: #d96b91;
+    font-size: 11px;
+    cursor: pointer;
+}
+.mood-history-item button:hover {
+    background: #d96b91;
+    color: #fff;
+}
