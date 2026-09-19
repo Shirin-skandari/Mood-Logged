@@ -7,8 +7,20 @@ const logButton = document.querySelector(".log-button");
 const savedMoods = localStorage.getItem("moodHistory");
 
 const moods = savedMoods ? JSON.parse(savedMoods) : [];
+const moodHistoryList = document.querySelector("#mood-history-list");
+moods.forEach((moodData) => {
+    const moodItem = document.createElement("div");
 
-console.log(moods);
+    moodItem.classList.add("mood-history-item");
+
+    const moodTitle = document.createElement("h3");
+    const moodNote = document.createElement("p");
+
+    moodTitle.textContent = moodData.mood;
+    moodNote.textContent = moodData.note;
+
+    moodHistoryList.appendChild(moodItem);
+});
 
 moodCards.forEach((moodCard) => {
     moodCard.addEventListener("click", () => {
