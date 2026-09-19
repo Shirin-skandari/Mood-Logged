@@ -261,3 +261,22 @@ footer p {
 .log-button.logged:hover {
     background: #e0417c;
 }
+
+.mood-history {
+    margin-top: 40px;
+}
+.mood-history h2 {
+    margin-bottom: 20px;
+}
+#mood-history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.mood-history-item {
+    background: #fff;
+    border: 1px solid #f8dce6;
+    border-radius: 16px;
+    padding: 18px 20px;
+    box-shadow: 0 5px 15px rgba(220, 140, 170, 0.08);
+}

@@ -19,6 +19,8 @@ moods.forEach((moodData) => {
     moodTitle.textContent = moodData.mood;
     moodNote.textContent = moodData.note;
 
+    moodItem.appendChild(moodTitle);
+    moodItem.appendChild(moodNote);
     moodHistoryList.appendChild(moodItem);
 });
 
