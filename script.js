@@ -18,14 +18,27 @@ moods.forEach((moodData) => {
     const moodTitle = document.createElement("h3");
     const moodNote = document.createElement("p");
     const moodDate = document.createElement("small")
+    const deleteButton = document.createElement("button");
 
     moodTitle.textContent = moodData.mood;
     moodNote.textContent = moodData.note;
     moodDate.textContent = moodData.date;
+    deleteButton.textContent = "Delete";
+
+    deleteButton.addEventListener("click", () => {
+        const moodIndex = moods.indexOf(moodData);
+
+        moods.splice(moodIndex, 1);
+
+        localStorage.setItem("moodHistory", JSON.stringify(moods));
+
+        moodItem.remove();
+    });
 
     moodItem.appendChild(moodTitle);
     moodItem.appendChild(moodNote);
     moodItem.appendChild(moodDate);
+    moodItem.appendChild(deleteButton);
     moodHistoryList.appendChild(moodItem);
 });
 
