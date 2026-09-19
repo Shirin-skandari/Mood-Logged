@@ -269,14 +269,53 @@ footer p {
     margin-bottom: 20px;
 }
 #mood-history-list {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+   display: flex;
+   flex-direction: column;
+   gap: 18px;
+   width: 100%;
 }
 .mood-history-item {
-    background: #fff;
-    border: 1px solid #f8dce6;
-    border-radius: 16px;
-    padding: 18px 20px;
-    box-shadow: 0 5px 15px rgba(220, 140, 170, 0.08);
+    width: 100%;
+    box-sizing: border-box;
+    background: #fff9fb;
+    border: 1px solid #f3dce5;
+    border-radius: 14px;
+    padding: 14px 18px;
+    box-shadow: none;
+}
+.mood-history-item h3 {
+    margin: 0 0 5px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.mood-history-item p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #777;
+}
+.mood-history-item small {
+    display: block;
+    margin-top: 9px;
+    font-size: 10px;
+    color: #aaa;
+}
+.happy-history {
+    border-color: #f5b8d0;
+    background: #fff7fa;
+}
+
+.sad-history {
+    border-color: #b9d2eb;
+    background: #f7faff;
+}
+
+.excited-history {
+    border-color: #cdbde9;
+    background: #faf8ff;
+}
+
+.angry-history {
+    border-color: #f2b7b7;
+    background: #fff8f8;
 }

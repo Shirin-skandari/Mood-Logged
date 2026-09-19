@@ -12,15 +12,20 @@ moods.forEach((moodData) => {
     const moodItem = document.createElement("div");
 
     moodItem.classList.add("mood-history-item");
+    moodItem.classList.add(`${moodData.mood.toLowerCase()}-history`);
+    console.log(moodData.mood, moodItem.className);
 
     const moodTitle = document.createElement("h3");
     const moodNote = document.createElement("p");
+    const moodDate = document.createElement("small")
 
     moodTitle.textContent = moodData.mood;
     moodNote.textContent = moodData.note;
+    moodDate.textContent = moodData.date;
 
     moodItem.appendChild(moodTitle);
     moodItem.appendChild(moodNote);
+    moodItem.appendChild(moodDate);
     moodHistoryList.appendChild(moodItem);
 });
 
@@ -55,11 +60,11 @@ logButton.addEventListener("click", () => {
 
     const moodData = {
         mood: selectedMoodName.textContent,
-        note: moodNote.value
+        note: moodNote.value,
+        date: new Date().toLocaleString()
 
        
     };
-    localStorage.setItem("moodData", JSON.stringify(moodData));
     moods.push(moodData);
     localStorage.setItem("moodHistory", JSON.stringify(moods));
     console.log(moods)
