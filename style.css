@@ -328,6 +328,7 @@ footer p {
     color: #d96b91;
     font-size: 11px;
     cursor: pointer;
+    transition: 0.2s ease;
 }
 .mood-history-item button:hover {
     background: #d96b91;
