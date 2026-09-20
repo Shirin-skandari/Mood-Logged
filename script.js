@@ -43,6 +43,7 @@ function addMoodToHistory(moodData) {
     moodItem.appendChild(moodTitle);
     moodItem.appendChild(moodNote);
     moodItem.appendChild(moodDate);
+    moodItem.appendChild(deleteButton);
 
     moodHistoryList.appendChild(moodItem);
 
@@ -85,7 +86,9 @@ logButton.addEventListener("click", () => {
     };
     moods.push(moodData);
     localStorage.setItem("moodHistory", JSON.stringify(moods));
-    console.log(moods)
+    
+    addMoodToHistory(moodData);
+
     logButton.classList.add("logged");
     logButton.textContent = "Mood logged ✓";
 

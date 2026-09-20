@@ -229,6 +229,10 @@ footer p {
     .selected-mood {
         padding: 16px;
     }
+    .mood-history-item button {
+        display: block;
+        visibility: visible;
+    }
 }
 .selected-mood {
     width: 100%;
@@ -333,4 +337,7 @@ footer p {
 .mood-history-item button:hover {
     background: #d96b91;
     color: #fff;
+}
+body::-webkit-scrollbar {
+    display: none;
 }
