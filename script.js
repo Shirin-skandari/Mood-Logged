@@ -9,9 +9,17 @@ const savedMoods = localStorage.getItem("moodHistory");
 const moods = savedMoods ? JSON.parse(savedMoods) : [];
 const moodHistoryList = document.querySelector("#mood-history-list");
 
-moods.forEach((moodData) => {
-    addMoodToHistory(moodData);
-});
+if (moods.length === 0) {
+    document.querySelector("#empty-state").style.display = "block";
+} else {
+
+    document.querySelector("#empty-state").style.display = "none";
+
+    moods.forEach((moodData) => {
+        addMoodToHistory(moodData);
+    });
+}
+
 
 
 function addMoodToHistory(moodData) {
@@ -38,6 +46,10 @@ function addMoodToHistory(moodData) {
         localStorage.setItem("moodHistory", JSON.stringify(moods));
 
         moodItem.remove();
+
+        if (moods.length === 0) {
+            document.querySelector("#empty-state").style.display = "block";
+        }
     });
 
     moodItem.appendChild(moodTitle);
@@ -88,6 +100,8 @@ logButton.addEventListener("click", () => {
     localStorage.setItem("moodHistory", JSON.stringify(moods));
     
     addMoodToHistory(moodData);
+
+    document.querySelector("#empty-state").style.display = "none";
 
     logButton.classList.add("logged");
     logButton.textContent = "Mood logged ✓";

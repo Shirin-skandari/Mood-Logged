@@ -341,3 +341,14 @@ footer p {
 body::-webkit-scrollbar {
     display: none;
 }
+
+#empty-state {
+    margin: 15px 0 5px;
+    padding: 16px;
+    text-align: center;
+    color: #b58a9a;
+    background: #fff7fa;
+    border: 1px dashed #f3c6d5;
+    border-radius: 12px;
+    font-size: 13px;
+}
