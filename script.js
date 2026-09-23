@@ -104,6 +104,8 @@ logButton.addEventListener("click", () => {
     
     addMoodToHistory(moodData);
 
+    moodNote.value = "";
+
     document.querySelector("#empty-state").style.display = "none";
 
     logButton.classList.add("logged");
