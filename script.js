@@ -89,7 +89,11 @@ moodCards.forEach((moodCard) => {
 logButton.addEventListener("click", () => {
     if (selectedMoodName.textContent === "-") {
         return;
+    }
 
+    if (moodNote.value.trim() === "") {
+         alert("Please write a little note first 💗");
+        return;
     }
 
     const moodData = {
