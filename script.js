@@ -67,6 +67,9 @@ moodCards.forEach((moodCard) => {
         selectedMoodName.textContent = moodName;
         selectedMoodName.className = `${moodName.toLowerCase()}-text`;
 
+        logButton.classList.remove("logged");
+        logButton.textContent = "♡ Log my mood";
+
         if (moodName === "Happy") {
             selectedMoodMessage.textContent = "Hold on to this little piece of happiness 💕";
         }
