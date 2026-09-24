@@ -337,6 +337,7 @@ footer p {
 .mood-history-item button:hover {
     background: #d96b91;
     color: #fff;
+    transform: translateY(-2px);
 }
 body::-webkit-scrollbar {
     display: none;
