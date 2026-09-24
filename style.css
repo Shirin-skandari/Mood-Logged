@@ -286,6 +286,11 @@ footer p {
     border-radius: 14px;
     padding: 14px 18px;
     box-shadow: none;
+    transition: 0.2s ease;
+}
+.mood-history-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0  6px 16px rgba(210, 150, 175, 0.12);
 }
 .mood-history-item h3 {
     margin: 0 0 5px;
