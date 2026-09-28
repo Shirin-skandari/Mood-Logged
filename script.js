@@ -47,9 +47,9 @@ function addMoodToHistory(moodData) {
         localStorage.setItem("moodHistory", JSON.stringify(moods));
 
         moodItem.remove();
-
+    
         if (moods.length === 0) {
-            document.querySelector("#empty-state").style.display = "block";
+            emptyState.style.display = "block";
         }
     });
 
