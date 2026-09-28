@@ -9,11 +9,12 @@ const savedMoods = localStorage.getItem("moodHistory");
 const moods = savedMoods ? JSON.parse(savedMoods) : [];
 const moodHistoryList = document.querySelector("#mood-history-list");
 
-if (moods.length === 0) {
-    document.querySelector("#empty-state").style.display = "block";
-} else {
+const emptyState = document.querySelector("#empty-state");
 
-    document.querySelector("#empty-state").style.display = "none";
+if (moods.length === 0) {
+   emptyState.style.display = "block";
+} else {
+    emptyState.style.display = "none";
 
     moods.forEach((moodData) => {
         addMoodToHistory(moodData);
@@ -70,19 +71,15 @@ moodCards.forEach((moodCard) => {
         logButton.classList.remove("logged");
         logButton.textContent = "♡ Log my mood";
 
-        if (moodName === "Happy") {
-            selectedMoodMessage.textContent = "Hold on to this little piece of happiness 💕";
-        }
-
-        if (moodName === "Sad") {
-            selectedMoodMessage.textContent = "You don't have to be okay all the time. Be gentle with yourself 🤍";
-        }
-        if (moodName === "Excited") {
-            selectedMoodMessage.textContent = "Let your happiness sparkle a little brighter today ✨";
-        }
-        if (moodName === "Angry") {
-            selectedMoodMessage.textContent = "Take a little pause. You deserve a moment to breathe 🌷";
-        }
+    if (moodName === "Happy") {
+        selectedMoodMessage.textContent = "Hold on to this little piece of happiness 💕";
+    } else if (moodName === "Sad") {
+        selectedMoodMessage.textContent = "You don't have to be okay all the time. Be gentle with yourself 🤍";
+    } else if (moodName === "Excited") {
+        selectedMoodMessage.textContent = "Let your happiness sparkle a little brighter today ✨";
+    } else if (moodName === "Angry") {
+        selectedMoodMessage.textContent = "Take a little pause. You deserve a moment to breathe 🌷";
+    }
     });
 });
 
@@ -108,9 +105,11 @@ logButton.addEventListener("click", () => {
     
     addMoodToHistory(moodData);
 
+    emptyState.style.display = "none";
+
     moodNote.value = "";
 
-    document.querySelector("#empty-state").style.display = "none";
+    
 
     logButton.classList.add("logged");
     logButton.textContent = "Mood logged ✓";
