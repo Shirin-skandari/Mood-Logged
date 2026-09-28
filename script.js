@@ -61,16 +61,8 @@ function addMoodToHistory(moodData) {
     moodHistoryList.appendChild(moodItem);
 
 }
-moodCards.forEach((moodCard) => {
-    moodCard.addEventListener("click", () => {
-        const moodName = moodCard.querySelector("p").textContent;
 
-        selectedMoodName.textContent = moodName;
-        selectedMoodName.className = `${moodName.toLowerCase()}-text`;
-
-        logButton.classList.remove("logged");
-        logButton.textContent = "♡ Log my mood";
-
+function showMoodMessage(moodName) {
     if (moodName === "Happy") {
         selectedMoodMessage.textContent = "Hold on to this little piece of happiness 💕";
     } else if (moodName === "Sad") {
@@ -80,6 +72,19 @@ moodCards.forEach((moodCard) => {
     } else if (moodName === "Angry") {
         selectedMoodMessage.textContent = "Take a little pause. You deserve a moment to breathe 🌷";
     }
+}
+
+moodCards.forEach((moodCard) => {
+    moodCard.addEventListener("click", () => {
+        const moodName = moodCard.querySelector("p").textContent;
+
+        selectedMoodName.textContent = moodName;
+        selectedMoodName.className = `${moodName.toLowerCase()}-text`;
+
+        logButton.classList.remove("logged");
+        logButton.textContent = "♡ Log my mood";
+        showMoodMessage(moodName);
+    
     });
 });
 
