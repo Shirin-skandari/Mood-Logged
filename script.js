@@ -100,7 +100,7 @@ logButton.addEventListener("click", () => {
 
     const moodData = {
         mood: selectedMoodName.textContent,
-        note: moodNote.value,
+        note: moodNote.value.trim(),
         date: new Date().toLocaleString()
 
        
